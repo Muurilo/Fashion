@@ -5,6 +5,7 @@ module.exports = {
   plugins: [
     "gatsby-plugin-postcss",
     "gatsby-plugin-image",
+    "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
