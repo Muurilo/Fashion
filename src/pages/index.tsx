@@ -1,6 +1,7 @@
 import * as React from "react";
-import { StaticImage } from "gatsby-plugin-image";
 import { useState } from "react";
+
+import FeaturedImg from "../images/featured.webp"
 
 const IndexPage = () => {
   let [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -56,8 +57,8 @@ const IndexPage = () => {
         </nav>
       </header>
       <div className="relative flex flex-col items-center justify-center w-screen text-center h-80 md:h-1/2">
-        <StaticImage
-          src="../images/featured.webp"
+        <img
+          src={FeaturedImg}
           className="w-full h-full"
           alt=""
         />
