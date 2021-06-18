@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useState } from "react";
 
+//@ts-ignore
 import FeaturedImg from "../images/featured.webp"
 
 const IndexPage = () => {
@@ -59,7 +60,7 @@ const IndexPage = () => {
       <div className="relative flex flex-col items-center justify-center w-screen text-center h-80 md:h-1/2">
         <img
           src={FeaturedImg}
-          className="w-full h-full"
+          className="object-cover w-full h-full"
           alt=""
         />
         <div className="absolute flex flex-col items-center content-center h-auto px-5 text-center md:bottom-0 md:text-left md:items-start md:left-0 md:mx-44 md:mb-16">
