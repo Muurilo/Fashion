@@ -1,5 +1,4 @@
 import * as React from "react";
-import {Link} from "gatsby"
 import { useState } from "react";
 
 //@ts-ignore
@@ -41,21 +40,21 @@ const IndexPage = () => {
             mobileMenuOpen ? "absolute" : ""
           } ${mobileMenuOpen === false ? "hidden" : ""}`}
         >
-          <Link to="#" className="block py-1 text-highlight hover:underline">
+          <a href="#" className="block py-1 text-highlight hover:underline">
             Home
-          </Link>
-          <Link to="#" className="block py-1 text-text-primary hover:underline">
+          </a>
+          <a href="#" className="block py-1 text-text-primary hover:underline">
             About us
-          </Link>
-          <Link to="#" className="block py-1 text-text-primary hover:underline">
+          </a>
+          <a href="#" className="block py-1 text-text-primary hover:underline">
             Services
-          </Link>
-          <Link to="#" className="block py-1 text-text-primary hover:underline">
+          </a>
+          <a href="#" className="block py-1 text-text-primary hover:underline">
             Blog
-          </Link>
-          <Link to="#" className="block py-1 text-text-primary hover:underline">
+          </a>
+          <a href="#" className="block py-1 text-text-primary hover:underline">
             Contact
-          </Link>
+          </a>
         </nav>
       </header>
       <div className="relative flex flex-col items-center justify-center w-screen text-center h-80 md:h-1/2">
