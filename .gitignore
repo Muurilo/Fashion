@@ -6,6 +6,12 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
+# Env
+
+.env.development
+.env.staging
+.env
+
 # Build
 
 public
