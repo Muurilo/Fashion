@@ -46,6 +46,14 @@ const IndexPage = () => {
               </h1>
             </div>
             <AuthorCard />
+            <div className="flex items-center justify-center p-8 mt-16 text-center border-2 border-custom-border">
+              <h1 className="text-2xl font-pt-serif text-text-primary">
+                Featured posts
+              </h1>
+            </div>
+            <PostCard size="widget" />
+            <PostCard size="widget" />
+            <PostCard size="widget" />
           </div>
         </div>
       </main>

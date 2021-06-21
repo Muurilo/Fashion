@@ -9,7 +9,7 @@ const Header: React.FC = () => {
   
   return (
     <header className="relative flex flex-row flex-wrap justify-between px-8 py-6 bg-white md:px-16 md:items-center md:space-x-4">
-      <a href="#" className="relative block">
+      <a href="/" className="relative block">
         <div className="absolute z-0 w-full h-2 opacity-30 bg-highlight bottom-1" />
         <h1 className="relative z-10 text-2xl font-bold uppercase font-pt-serif">
           Fashion
