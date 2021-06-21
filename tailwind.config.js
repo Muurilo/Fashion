@@ -10,7 +10,9 @@ module.exports = {
       colors: {
         "text-primary": "#171717",
         "text-secondary": "#666666",
-        "highlight": "#C9A96E"
+        "text-other": "#B1B1B1",
+        "highlight": "#C9A96E",
+        "custom-border": "#E5E5E5"
       },
       fontFamily: {
         "pt-serif": "PT Serif",
