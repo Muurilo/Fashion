@@ -12,12 +12,14 @@ module.exports = {
         "text-secondary": "#666666",
         "text-other": "#B1B1B1",
         "highlight": "#C9A96E",
-        "custom-border": "#E5E5E5"
+        "custom-border": "#E5E5E5",
+        "background-social": "#F8F9FA",
+        "secondary-action": "#A2A2A2"
       },
       fontFamily: {
         "pt-serif": "PT Serif",
-        "pt-sans": "PT Sans"
-      }
+        "pt-sans": "PT Sans",
+      },
     },
   },
   variants: {

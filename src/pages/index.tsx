@@ -1,8 +1,11 @@
 import * as React from "react";
 
 import AuthorCard from "../components/AuthorCard";
+import Divider from "../components/Divider";
 import Header from "../components/Header";
+import Paginator from "../components/Paginator";
 import PostCard from "../components/PostCard";
+import SocialInfo from "../components/SocialInfo";
 
 //@ts-ignore
 import FeaturedImg from "../images/featured.webp";
@@ -37,23 +40,23 @@ const IndexPage = () => {
               <PostCard />
               <PostCard />
               <PostCard />
+              <PostCard />
+              <PostCard />
+              <PostCard />
+              <PostCard />
+              <PostCard />
             </div>
+            <Paginator />
           </div>
           <div className="w-full px-6 my-6 overflow-hidden md:justify-center md:items-center md:w-1/2 lg:w-1/4 xl:w-1/4">
-            <div className="flex items-center justify-center p-8 mb-16 text-center border-2 border-custom-border">
-              <h1 className="text-2xl font-pt-serif text-text-primary">
-                About the author
-              </h1>
-            </div>
+            <Divider title="About the author" />
             <AuthorCard />
-            <div className="flex items-center justify-center p-8 mt-16 text-center border-2 border-custom-border">
-              <h1 className="text-2xl font-pt-serif text-text-primary">
-                Featured posts
-              </h1>
-            </div>
+            <Divider title="Featured posts" />
             <PostCard size="widget" />
             <PostCard size="widget" />
             <PostCard size="widget" />
+            <Divider title="Social media" />
+            <SocialInfo />
           </div>
         </div>
       </main>

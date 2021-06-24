@@ -5,7 +5,7 @@ import AuthorImg from "../../images/author.jpg";
 
 const AuthorCard: React.FC = () => {
   return (
-    <article className="flex flex-col items-center justify-center w-auto h-auto text-center border-2">
+    <article className="flex flex-col items-center justify-center w-auto h-auto mb-16 text-center border-2">
       <img src={AuthorImg} className="object-cover w-full h-full" alt="" />
       <div className="p-5">
         <h1 className="text-xl font-bold text-text-primary font-pt-serif">
