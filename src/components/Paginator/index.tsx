@@ -3,7 +3,7 @@ import { TiChevronLeft, TiChevronRight } from "react-icons/ti";
 
 const Paginator: React.FC = () => {
   return (
-    <div className="flex items-center justify-between py-3 bg-white border-gray-200 sm:px-6">
+    <div className="flex items-center justify-between py-3 m-5 bg-white border-gray-200 sm:px-6">
       <div className="flex justify-between flex-1 sm:hidden">
         <a
           href="#"
