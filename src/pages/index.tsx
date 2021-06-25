@@ -3,12 +3,15 @@ import * as React from "react";
 import AuthorCard from "../components/AuthorCard";
 import Divider from "../components/Divider";
 import Header from "../components/Header";
+import Logo from "../components/Logo";
 import Paginator from "../components/Paginator";
 import PostCard from "../components/PostCard";
 import SocialInfo from "../components/SocialInfo";
 
 //@ts-ignore
 import FeaturedImg from "../images/featured.webp";
+//@ts-ignore
+import SpotLight from "../images/spotlight.jpg";
 
 const IndexPage = () => {
   return (
@@ -60,6 +63,17 @@ const IndexPage = () => {
           </div>
         </div>
       </main>
+      <footer className="flex flex-col items-center justify-center overflow-hidden mt-28">
+        <Logo size="large" />
+        <div className="flex flex-row items-center justify-center py-24 space-x-5 font-pt-sans text-text-secondary">
+          <a href="#">Home</a>
+          <a href="#">Recipes</a>
+          <a href="#">Article</a>
+          <a href="#">Contact</a>
+          <a href="#">Purchase</a>
+        </div>
+        <small className="p-10 font-pt-sans text-text-secondary">&copy; Muurilo. All Right Reserved.</small>
+      </footer>
     </>
   );
 };
