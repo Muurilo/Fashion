@@ -32,7 +32,7 @@ const IndexPage = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col flex-wrap items-center justify-center overflow-hidden md:items-start md:justify-center lg:mx-44 md:flex-row">
+        <div className="flex flex-col flex-wrap items-center justify-center overflow-hidden md:items-start md:justify-center md:flex-row">
           <div className="flex-grow w-full px-10 overflow-hidden md:px-4 sm:w-full md:w-full lg:w-1/2 xl:w-1/2">
             <div className="flex flex-wrap items-center justify-center -mx-6 overflow-hidden md:mx-0 md:justify-center md:items-center">
               <PostCard />
@@ -48,7 +48,7 @@ const IndexPage = () => {
               <Paginator />
             </div>
           </div>
-          <div className="w-full px-6 my-6 overflow-hidden md:justify-center md:items-center md:w-1/2 lg:w-1/4 xl:w-1/4">
+          <div className="w-full px-6 my-6 overflow-hidden md:justify-center md:items-center md:mx-10 lg:w-1/4 xl:w-1/4">
             <Divider title="About the author" />
             <AuthorCard />
             <Divider title="Featured posts" />

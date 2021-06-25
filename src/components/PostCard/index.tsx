@@ -15,7 +15,7 @@ const PostCard = ({ size }: IPostCard) => {
         <p className="p-2 text-lg uppercase font-pt-sans text-highlight">
           Tourism
         </p>
-        <h1 className="mx-10 text-2xl text-center break-words font-pt-serif text-text-primary">
+        <h1 className="mx-10 text-2xl text-center break-words font-pt-serif lg:mx-44 xl:mx-5 lg:mx-5 text-text-primary">
           One of Saturn’s largest rings may be newer than anyone
         </h1>
         <div className="flex flex-row p-5 mx-1 space-x-6 font-pt-serif text-text-secondary">
