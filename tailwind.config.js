@@ -4,9 +4,6 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      backgroundImage: (theme) => ({
-        "featured-image": "url('./src/images/featured.jpg')",
-      }),
       colors: {
         "text-primary": "#171717",
         "text-secondary": "#666666",
@@ -14,7 +11,7 @@ module.exports = {
         "highlight": "#C9A96E",
         "custom-border": "#E5E5E5",
         "background-social": "#F8F9FA",
-        "secondary-action": "#A2A2A2"
+        "secondary-action": "#A2A2A2",
       },
       fontFamily: {
         "pt-serif": "PT Serif",

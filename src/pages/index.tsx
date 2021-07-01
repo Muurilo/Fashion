@@ -1,5 +1,6 @@
 import * as React from "react";
 import { graphql } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 
 import AuthorCard from "../components/AuthorCard";
 import Divider from "../components/Divider";
@@ -9,11 +10,6 @@ import Paginator from "../components/Paginator";
 import PostCard from "../components/PostCard";
 import SocialInfo from "../components/SocialInfo";
 
-//@ts-ignore
-import FeaturedImg from "../images/featured.webp";
-//@ts-ignore
-import SpotLight from "../images/spotlight.jpg";
-
 const IndexPage = ({ data }) => {
   const featuredDate = new Date(data.posts.nodes[0].date);
   console.log(data);
@@ -22,10 +18,12 @@ const IndexPage = ({ data }) => {
       <Header />
       <main className="flex flex-col overflow-hidden">
         <div className="relative flex flex-col items-center justify-center w-screen text-center h-80 md:h-1/2">
-          <img
-            src={data.posts.nodes[0].coverImage.url}
-            className="object-cover w-full h-full max-h-[34rem]"
-            alt=""
+          <StaticImage
+            src="../images/featured.webp"
+            alt="Featured post image"
+            className="w-full h-full max-h-[34rem] object-center"
+            placeholder="blurred"
+            layout="fullWidth"
           />
           <div className="absolute flex flex-col items-center content-center w-1/2 px-5 text-center md:bottom-0 lg:w-1/3 md:text-left md:items-start md:left-0 md:mx-44 md:mb-16">
             <p className="text-white uppercase font-pt-sans">
@@ -50,29 +48,36 @@ const IndexPage = ({ data }) => {
         <div className="flex flex-col flex-wrap items-center justify-center overflow-hidden md:items-start md:justify-center md:flex-row">
           <div className="flex-grow w-full px-10 overflow-hidden md:px-4 sm:w-full md:w-full lg:w-1/2 xl:w-1/2">
             <div className="flex flex-wrap items-center justify-center -mx-6 overflow-hidden md:mx-0 md:justify-center md:items-center">
-              {data.posts.nodes.map((post) => {
-                return (
-                  <PostCard
-                    author={post.author.name}
-                    banner={post.coverImage.url}
-                    date={post.date}
-                    tag={post.tags[0]}
-                    title={post.title}
-                  />
-                );
+              {data.posts.nodes.map((post, index) => {
+                if (index > 0) {
+                  return (
+                    <PostCard
+                      author={post.author.name}
+                      banner={post.coverImage}
+                      date={post.date}
+                      tag={post.tags[0]}
+                      title={post.title}
+                    />
+                  );
+                }
               })}
               <Paginator />
             </div>
           </div>
           <div className="w-full px-6 my-6 overflow-hidden md:justify-center md:items-center md:mx-10 lg:w-1/4 xl:w-1/4">
             <Divider title="About the author" />
-            <AuthorCard />
+            <AuthorCard
+              banner={data.authors.nodes[0].picture.url}
+              bio={data.authors.nodes[0].biography}
+              name={data.authors.nodes[0].name}
+              title={data.authors.nodes[0].title}
+            />
             <Divider title="Featured posts" />
             {data.featuredPosts.nodes.map((post) => {
               return (
                 <PostCard
                   author={post.author.name}
-                  banner={post.coverImage.url}
+                  banner={post.coverImage}
                   date={post.date}
                   tag={post.tags[0]}
                   title={post.title}
@@ -109,6 +114,7 @@ export const query = graphql`
         title
         coverImage {
           url
+          gatsbyImageData(layout: FULL_WIDTH)
         }
         tags
         date
@@ -122,12 +128,23 @@ export const query = graphql`
         title
         coverImage {
           url
+          gatsbyImageData(layout: FULL_WIDTH)
         }
         tags
         date
         author {
           name
         }
+      }
+    }
+    authors: allGraphCmsAuthor {
+      nodes {
+        name
+        title
+        picture {
+          url
+        }
+        biography
       }
     }
   }

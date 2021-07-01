@@ -1,11 +1,12 @@
 import React from "react";
+import { getImage, GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 
 //@ts-ignore
 import PostImg from "../../images/postimage.jpg";
 
 interface IPostCard {
   size?: string;
-  banner: string;
+  banner: IGatsbyImageData;
   tag: string;
   title: string;
   date: string;
@@ -14,11 +15,16 @@ interface IPostCard {
 
 const PostCard = ({ size, banner, tag, title, date, author }: IPostCard) => {
   const PostDate = new Date(date);
+  const PostImage = getImage(banner);
 
   if (size === "widget") {
     return (
-      <article className="flex flex-col items-center justify-center w-auto h-auto mt-16 border-2">
-        <img src={banner} className="w-full h-full" alt="" />
+      <article className="flex flex-col items-center justify-center w-auto h-auto mt-16 border-2 md:max-h-[25rem]">
+        <GatsbyImage
+          image={PostImage}
+          className="object-cover w-full h-full"
+          alt=""
+        />
         <p className="p-2 text-lg uppercase font-pt-sans text-highlight">
           {tag}
         </p>
@@ -43,8 +49,12 @@ const PostCard = ({ size, banner, tag, title, date, author }: IPostCard) => {
   } else {
     return (
       <div className="w-full px-6 my-6 overflow-hidden text-center md:w-1/2">
-        <article className="flex flex-col items-center justify-center w-auto h-auto border-2">
-          <img src={banner} className="w-full h-full" alt="" />
+        <article className="flex flex-col items-center justify-center w-auto h-auto border-2 md:max-h-[25rem]">
+          <GatsbyImage
+            image={PostImage}
+            className="object-cover w-full h-full"
+            alt=""
+          />
           <p className="p-2 text-lg uppercase font-pt-sans text-highlight">
             {tag}
           </p>
