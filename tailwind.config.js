@@ -7,8 +7,8 @@ module.exports = {
       colors: {
         "text-primary": "#171717",
         "text-secondary": "#666666",
-        "text-other": "#B1B1B1",
-        "highlight": "#C9A96E",
+        "text-other": "#424242",
+        "highlight": "#4E3D1D",
         "custom-border": "#E5E5E5",
         "background-social": "#F8F9FA",
         "secondary-action": "#A2A2A2",
