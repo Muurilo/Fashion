@@ -22,6 +22,7 @@
     "gatsby-plugin-image": "^1.7.1",
     "gatsby-plugin-manifest": "^3.7.1",
     "gatsby-plugin-sharp": "^3.7.1",
+    "gatsby-plugin-simple-analytics": "^1.0.4",
     "gatsby-source-filesystem": "^3.7.1",
     "gatsby-source-graphcms": "^2.6.0",
     "gatsby-transformer-sharp": "^3.7.1",
